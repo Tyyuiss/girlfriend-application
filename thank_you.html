@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You</title>
+<link rel="icon" href="icon.png" type="image/png">
+<style>
+    body {
+        background-color: #222;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        width: 100%;
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        background-color: #333;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Thank you for your application, <span id="name"></span>!</h2>
+</div>
+
+<script>
+    // Get the name parameter from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('name');
+    // Set the name in the HTML
+    document.getElementById('name').innerText = name;
+</script>
+
+</body>
+</html>
